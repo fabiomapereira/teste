@@ -10,17 +10,17 @@
 
     - name: Hold kubelet
       ansible.builtin.dpkg_selections:
-        name: kubeadm
+        name: kubelet
         selection: hold
 
     - name: Hold containerd
       ansible.builtin.dpkg_selections:
-        name: kubeadm
+        name: containerd
         selection: hold
 
     - name: Hold kubectl
       ansible.builtin.dpkg_selections:
-        name: kubeadm
+        name: kubectl
         selection: hold
 
     - name: Update apt packages
