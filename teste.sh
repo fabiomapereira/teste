@@ -1,1 +1,1 @@
-echo "ola"
+sudo apt-get update -y
