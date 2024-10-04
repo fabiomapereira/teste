@@ -3,15 +3,15 @@
 
   become: true
   tasks:
-    - name: Hold specific packages
-      apt:
-        name: "{{ item }}"
-        state: hold
-      loop:
-        - containerd
-        - kubeadm
-        - kubectl
-        - kubelet
+    - name: Hold kubeadm
+      ansible.builtin.dpkg_selections:
+        name: kubeadm
+        selection: hold
+        
+    - name: Hold kubeadm
+      ansible.builtin.dpkg_selections:
+        name: kubeadm
+        selection: hold
 
     - name: Update apt packages
       apt:
