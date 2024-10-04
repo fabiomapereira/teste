@@ -7,8 +7,18 @@
       ansible.builtin.dpkg_selections:
         name: kubeadm
         selection: hold
-        
-    - name: Hold kubeadm
+
+    - name: Hold kubelet
+      ansible.builtin.dpkg_selections:
+        name: kubeadm
+        selection: hold
+
+    - name: Hold containerd
+      ansible.builtin.dpkg_selections:
+        name: kubeadm
+        selection: hold
+
+    - name: Hold kubectl
       ansible.builtin.dpkg_selections:
         name: kubeadm
         selection: hold
